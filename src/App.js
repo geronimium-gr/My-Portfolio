@@ -1,10 +1,14 @@
 import React from "react";
 import NavigationBar from "./Sections/NavigationBar";
+import Hero from "./Sections/Hero";
 
 function App() {
   return (
     <>
-      <NavigationBar />
+      <div className="bg-newYorkPink">
+        <NavigationBar />
+        <Hero />
+      </div>
     </>
   );
 }
