@@ -1,10 +1,11 @@
 import React from "react";
+import NavigationBar from "./Sections/NavigationBar";
 
 function App() {
   return (
-    <div> 
-      <h1>Sample</h1>
-    </div>
+    <>
+      <NavigationBar />
+    </>
   );
 }
 
