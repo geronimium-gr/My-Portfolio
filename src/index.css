@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* .navlink {
+    @apply px-4 text-whitish text-lg font-medium hover:text-black;
+  } */
+
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-newYorkPink;
+  }
+
+  #hero {
+    background-image: url("./images/bg.png");
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    background-position: 80% 0%;
+    background-size: contain;
+  }
+}
