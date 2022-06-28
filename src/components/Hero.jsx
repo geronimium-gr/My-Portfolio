@@ -4,9 +4,9 @@ import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section id="hero" className="grid grid-cols-1 mt-10 pb-28 md:pb-0 md:h-screen">
-      <div className="min-h-[50px] px-6 m-auto mt-10 space-y-12">
-        <h1 className="text-whitish text-4xl font-bold text-center item-center md:text-7xl">
+    <section id="hero" className="grid grid-cols-1 h-screen">
+      <div className="flex flex-col justify-center px-6 mx-auto space-y-12">
+        <h1 className="text-whitish text-5xl font-bold text-center md:text-8xl md:text-left">
           John Paulo Geronimo
         </h1>
         <p className="max-w-md text-2xl text-center font-bold text-whitish md:text-left md:text-3xl">

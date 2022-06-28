@@ -5,7 +5,7 @@ const NavigationBar = () => {
   return (
     // Navigation Bar
     <>
-      <nav id="navlink" className="relative container mx-auto p-6">
+      <nav id="navlink" className="relative container mx-auto ">
         <div className="flex items-center justify-between">
           <div className="pt-2 flex items-center justify-between">
             <img className="w-20" src={logo} alt="" />

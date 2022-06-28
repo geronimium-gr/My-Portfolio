@@ -8,18 +8,21 @@ const About = () => {
         <div className="md:flex">
           <div className="md:shrink-0">
             <img
-              className="h-48 w-full object-cover md:h-full md:w-48"
+              className="h-48 w-full object-cover md:h-full md:w-96"
               src={sample}
-              alt="Man looking at item at a store"
+              alt=""
             />
           </div>
-          <div className="flex flex-col md:flex-row">
-            <div className="p-10 md:p-20">
-              <p className="mt-2 text-slate-500 max-w-md text-2xl text-center font-bold md:text-3xl">
-                About Me
-              </p>
-            </div>
+          <div className="flex flex-col lg:flex-row">
+            {/* <div className="p-10 md:p-20"></div> */}
             <div className="p-8 place-self-center">
+              <div class="relative flex items-center py-5">
+                <div class="flex-grow border-2 border-newYorkPink"></div>
+                <span className="p-2 text-gunmetal text-2xl text-center font-bold md:text-3xl">
+                  About Me
+                </span>
+                <div class="flex-grow border-2 border-newYorkPink"></div>
+              </div>
               <p className="mt-2 text-slate-500">
                 Park Jiwon (박지원) was born on March 20, 1998 in Busan, South
                 Korea. She was a trainee for JYP Entertainment from 2012-2015,
