@@ -4,32 +4,37 @@ import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section id="hero" className="h-screen">
-      <div className="container flex flex-col-reverse item-center px-6 mx-auto mt-10 space-y-0 md:flex-row md:space-y-0">
-        <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
-          <h1 className="text-whitish max-w-md text-4xl font-bold text-center md:text-6xl md:text-left">
-            John Paulo A. Geronimo
-          </h1>
-          <p className="max-w-md text-2xl text-center font-bold text-whitish md:text-left md:text-3xl">
-            Aspiring Web Developer
-          </p>
-          <div className="flex justify-center space-x-4 md:justify-start">
-            <a href="http://">
-              <FaFacebook className="text-whitish" size={50} />
-            </a>
-            <a href="http://">
-              <FaTwitter className="text-whitish" size={50} />
-            </a>
-            <a href="http://">
-              <FaGithub className="text-whitish" size={50} />
-            </a>
-            <a href="http://">
-              <FaLinkedin className="text-whitish" size={50} />
-            </a>
-          </div>
+    <section id="hero" className="grid grid-cols-1 mt-10 pb-28 md:pb-0 md:h-screen">
+      <div className="min-h-[50px] px-6 m-auto mt-10 space-y-12">
+        <h1 className="text-whitish text-4xl font-bold text-center item-center md:text-7xl">
+          John Paulo Geronimo
+        </h1>
+        <p className="max-w-md text-2xl text-center font-bold text-whitish md:text-left md:text-3xl">
+          Aspiring Web Developer
+        </p>
+        <div className="flex justify-center space-x-4 md:justify-start">
+          <a href="http://">
+            <FaFacebook className="text-whitish" size={50} />
+          </a>
+          <a href="http://">
+            <FaTwitter className="text-whitish" size={50} />
+          </a>
+          <a href="http://">
+            <FaGithub className="text-whitish" size={50} />
+          </a>
+          <a href="http://">
+            <FaLinkedin className="text-whitish" size={50} />
+          </a>
         </div>
-        <div className="md:w-1/2">
-          <img className="mb-4 md:w-[25rem] md:h-[25rem]" src={image} alt="" />
+        <div className="flex justify-center md:justify-start">
+          <button
+            className="bg-transparent
+                      text-whitish font-semibold
+                      py-2 px-4 border border-whitish-500 rounded-full 
+                      hover:text-newYorkPink hover:bg-whitish hover:border-transparent"
+          >
+            Download CV
+          </button>
         </div>
       </div>
     </section>
