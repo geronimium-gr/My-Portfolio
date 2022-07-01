@@ -1,8 +1,48 @@
 import React from "react";
 import sample from "../images/img-4.jpg";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Project = () => {
+  const project = [
+    {
+      id: 1,
+      image:
+        "https://www.pledis.co.kr/_data/file/bbsData/efd5efba9cf03c3d239fc3476e9f80bb.jpg",
+      name: "Project Chaeyoung",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
+    },
+    {
+      id: 2,
+      image:
+        "https://www.pledis.co.kr/_data/file/bbsData/f5bc7b1d43266801bfabe90472efb251.jpg",
+      name: "Project Hayoung",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
+    },
+    {
+      id: 3,
+      image:
+        "https://www.pledis.co.kr/_data/file/bbsData/f8a9dd381d920164dd646be18eb355bb.jpg",
+      name: "Project Gyuri",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
+    },
+    {
+      id: 4,
+      image:
+        "https://www.pledis.co.kr/_data/file/bbsData/e95d8359fb3c973c0203274eff59624c.jpg",
+      name: "Project Jiwon",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
+    },
+  ];
+
   return (
     <section id="slider" className="space-margin shadow-lg bg-whitish">
       <div className="container p-6">
@@ -25,22 +65,39 @@ const Project = () => {
                 </div>
               </div>
             </div>
-            <div className="my-slider">
-              <div className="slide">
-                <div className="slide-img bg-project">
-                  <a href="http://">View More</a>
-                </div>
-                <div className="slide-info">
-                  <h3 className="project-name">Sample</h3>
-                  <p className="mt-2 text-slate-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Temporibus numquam cum aliquam dolore eos blanditiis ut, rem
-                    suscipit veritatis ad repudiandae ullam debitis dolores sit
-                    deserunt, voluptatibus dolorem quam eaque?
-                  </p>
-                </div>
-              </div>
-            </div>
+
+            <Swiper
+              navigation={{ prevEl: ".previous", nextEl: ".next" }}
+              rewind={true}
+              modules={[Navigation]}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {project.map((elem, index) => (
+                <SwiperSlide key={elem.id}>
+                  <div className="my-slider">
+                    <div className="slide md:flex">
+                      <div
+                        className="slide-img h-52 w-full object-cover"
+                        style={{
+                          backgroundImage: `url(${elem.image})`,
+                        }}
+                      >
+                        <a href="http://">View More</a>
+                      </div>
+                      <div className="slide-info w-full pt-3 md:pl-8">
+                        <h5 className="text-2xl font-semibold leading-normal mt-0 mb-2 text-newYorkPink">
+                          {elem.name}
+                        </h5>
+                        <p className="mt-2 text-slate-500">
+                          {elem.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
