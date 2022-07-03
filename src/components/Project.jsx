@@ -3,6 +3,7 @@ import sample from "../images/img-4.jpg";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import List from "../subcomponents/List";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -32,20 +33,12 @@ const Project = () => {
       name: "Project Gyuri",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
-    },
-    {
-      id: 4,
-      image:
-        "https://www.pledis.co.kr/_data/file/bbsData/e95d8359fb3c973c0203274eff59624c.jpg",
-      name: "Project Jiwon",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
-    },
+    }
   ];
 
   return (
     <section id="slider" className="space-margin shadow-lg bg-whitish">
-      <div className="container p-6">
+      <div className="max-w-full p-6 md:container">
         <div className="">
           <div className="slider-wrapper">
             <div className="">
@@ -55,12 +48,15 @@ const Project = () => {
                   Projects
                 </span>
                 <div className="flex-grow border-2 border-newYorkPink"></div>
-                <div id="controls">
+                <div id="controls" className="hidden md:flex">
                   <button className="previous p-1">
-                    <FaArrowAltCircleLeft size={25} />
+                    <FaArrowAltCircleLeft className="text-gunmetal" size={25} />
                   </button>
                   <button className="next p-1">
-                    <FaArrowAltCircleRight size={25} />
+                    <FaArrowAltCircleRight
+                      className="text-gunmetal"
+                      size={25}
+                    />
                   </button>
                 </div>
               </div>
@@ -73,25 +69,26 @@ const Project = () => {
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              {project.map((elem, index) => (
+              {project.map((elem) => (
                 <SwiperSlide key={elem.id}>
                   <div className="my-slider">
                     <div className="slide md:flex">
                       <div
-                        className="slide-img h-52 w-full object-cover"
+                        className="slide-img h-52 w-full object-cover md:h-auto"
                         style={{
                           backgroundImage: `url(${elem.image})`,
                         }}
                       >
                         <a href="http://">View More</a>
                       </div>
-                      <div className="slide-info w-full pt-3 md:pl-8">
+                      <div className="slide-info w-full pt-3 md:pl-8 md:h-full">
                         <h5 className="text-2xl font-semibold leading-normal mt-0 mb-2 text-newYorkPink">
                           {elem.name}
                         </h5>
                         <p className="mt-2 text-slate-500">
                           {elem.description}
                         </p>
+                        <List/>
                       </div>
                     </div>
                   </div>
