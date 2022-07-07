@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/geronimologo.png";
 import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const [message, setMessage] = useState("");
   const currentYear = new Date();
 
   return (
@@ -51,7 +52,8 @@ const Footer = () => {
             <div className="flex space-x-3">
               <input
                 type="text"
-                name=""
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 id=""
                 className="flex-1 w-full px-4 rounded-full outline outline-1"
                 placeholder="Send Message"
@@ -62,7 +64,7 @@ const Footer = () => {
             </div>
           </form>
           <div className="hidden text-gunmetal md:block">
-            Copyright &copy; {currentYear.getFullYear()}, All Rights Reserved
+            Copyright &copy; {currentYear.getFullYear()}, All Rights Reserved.
           </div>
         </div>
       </div>

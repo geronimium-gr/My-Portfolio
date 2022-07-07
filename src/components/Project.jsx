@@ -33,7 +33,7 @@ const Project = () => {
       name: "Project Gyuri",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
-    }
+    },
   ];
 
   return (
@@ -72,7 +72,7 @@ const Project = () => {
               {project.map((elem) => (
                 <SwiperSlide key={elem.id}>
                   <div className="my-slider">
-                    <div className="slide md:flex">
+                    <div className="slide px-3 md:flex">
                       <div
                         className="slide-img h-52 w-full object-cover md:h-auto"
                         style={{
@@ -88,7 +88,7 @@ const Project = () => {
                         <p className="mt-2 text-slate-500">
                           {elem.description}
                         </p>
-                        <List/>
+                        <List />
                       </div>
                     </div>
                   </div>

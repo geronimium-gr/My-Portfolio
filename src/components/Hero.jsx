@@ -30,7 +30,7 @@ const Hero = () => {
           <button
             className="bg-transparent
                       text-whitish font-semibold
-                      py-2 px-4 border border-whitish-500 rounded-full 
+                      py-2 px-4 border border-whitish rounded-full 
                       hover:text-newYorkPink hover:bg-whitish hover:border-transparent"
           >
             Download CV
