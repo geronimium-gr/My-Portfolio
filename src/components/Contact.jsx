@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="flex justify-center items-center p-4 md:w-full md:h-screen bg-gunmetal"
+      className="flex justify-center items-center p-4 bg-gunmetal"
     >
       <form
         action="https://getform.io/f/b3b43de4-6b66-43fc-bbb6-858a5cf494b7"
@@ -40,7 +40,7 @@ const Contact = () => {
           className="p-2 bg-whitish focus:outline-none"
           name="message"
           id=""
-          rows="10"
+          rows="5"
           maxLength={200}
           placeholder="Message"
           required
