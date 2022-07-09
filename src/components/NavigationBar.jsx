@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/geronimologowhite.png";
 import smalllogo from "../images/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavigationBar = () => {
+  const [menu, setMenu] = useState(false);
+
+  const openMenu = () => setMenu(!menu);
+
   return (
     // Navigation Bar
     <>
@@ -38,17 +42,34 @@ const NavigationBar = () => {
             </a>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex px-4 md:hidden">
-            <FaBars className="self-center text-whitish" size={25} />
-          </div>
+          <button
+            onClick={openMenu}
+            className={`${
+              !menu
+                ? "absolute inset-y-0 right-0 flex px-4 outline-none md:hidden"
+                : "fixed right-0 flex px-4 z-20 outline-none md:hidden "
+            }`}
+          >
+            {!menu ? (
+              <FaBars className="self-center text-whitish" size={25} />
+            ) : (
+              <FaTimes className="self-center text-whitish" size={25} />
+            )}
+          </button>
         </div>
       </nav>
 
-      {/* <ul>
-        <li>About Me</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
-      </ul> */}
+      <ul
+        className={`${
+          !menu
+            ? "hidden"
+            : "fixed z-10 top-0 left-0 w-full h-full bg-gunmetal text-whitish flex flex-col justify-center items-center md:hidden"
+        }`}
+      >
+        <li className="py-6 text-4xl">About Me</li>
+        <li className="py-6 text-4xl">Portfolio</li>
+        <li className="py-6 text-4xl">Contact</li>
+      </ul>
     </>
   );
 };
