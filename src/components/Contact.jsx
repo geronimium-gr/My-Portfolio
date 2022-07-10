@@ -20,7 +20,8 @@ const Contact = () => {
             <div className="flex-grow border-2 border-newYorkPink"></div>
           </div>
           <p className="text-whitish py-4">
-            Submit the form below or send me an email - geronimoadalia@gmail.com
+            Feel free to leave me a message via the form, or you can get a hold
+            of me at <strong>geronimoadalia@gmail.com</strong>
           </p>
         </div>
         <input

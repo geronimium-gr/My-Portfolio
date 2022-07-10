@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/geronimologowhite.png";
 import smalllogo from "../images/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const NavigationBar = () => {
   const [menu, setMenu] = useState(false);
@@ -11,7 +12,7 @@ const NavigationBar = () => {
   return (
     // Navigation Bar
     <>
-      <nav id="navlink" className="relative container mx-auto ">
+      <nav id="navlink" className="relative container mx-auto">
         <div className="flex pt-4 w-full items-center justify-between">
           <div className="p-3 hidden md:flex">
             <img className="w-60" src={logo} alt="" />
@@ -21,25 +22,32 @@ const NavigationBar = () => {
             <img className="w-20" src={smalllogo} alt="" />
           </div>
 
-          <div className="hidden space-x-6 md:flex ">
-            <a
-              href="http://"
-              className="text-whitish text-lg font-medium hover:text-dark"
+          {/* desktop menu */}
+          <div className="hidden space-x-6 text-whitish text-lg font-medium md:flex">
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer transition-all duration-200 ease-linear hover:scale-110 hover:font-bold"
             >
               About Me
-            </a>
-            <a
-              href="http://"
-              className="text-whitish text-lg font-medium hover:text-dark"
+            </Link>
+            <Link
+              to="project"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer transition-all duration-200 ease-linear hover:scale-110 hover:font-bold"
             >
-              Portfolio
-            </a>
-            <a
-              href="http://"
-              className="text-whitish text-lg font-medium hover:text-dark"
+              Porfolio
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer transition-all duration-200 ease-linear hover:scale-110 hover:font-bold"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           <button
@@ -59,6 +67,7 @@ const NavigationBar = () => {
         </div>
       </nav>
 
+      {/* mobile menu */}
       <ul
         className={`${
           !menu
@@ -66,9 +75,39 @@ const NavigationBar = () => {
             : "fixed z-10 top-0 left-0 w-full h-full bg-gunmetal text-whitish flex flex-col justify-center items-center md:hidden"
         }`}
       >
-        <li className="py-6 text-4xl">About Me</li>
-        <li className="py-6 text-4xl">Portfolio</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <Link
+            to="about"
+            onClick={openMenu}
+            smooth={true}
+            duration={500}
+            className="text-bold"
+          >
+            About Me
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            to="project"
+            onClick={openMenu}
+            smooth={true}
+            duration={500}
+            className="text-bold"
+          >
+            Portfolio
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            to="contact"
+            onClick={openMenu}
+            smooth={true}
+            duration={500}
+            className="text-bold"
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </>
   );

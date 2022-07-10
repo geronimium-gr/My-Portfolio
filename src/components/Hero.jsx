@@ -6,13 +6,22 @@ const Hero = () => {
   return (
     <section id="hero" className="grid grid-cols-1 h-screen">
       <div className="flex flex-col justify-center px-6 mx-auto space-y-12">
-        <h1 className="text-whitish text-5xl font-bold text-center md:text-8xl md:text-left">
+        <h1
+          id="name"
+          className="text-whitish text-5xl font-bold text-center md:text-8xl md:text-left"
+        >
           John Paulo Geronimo
         </h1>
-        <p className="max-w-md text-2xl text-center font-bold text-whitish md:text-left md:text-3xl">
+        <p
+          id="name"
+          className="text-2xl text-center font-bold text-whitish md:text-left md:text-3xl"
+        >
           Aspiring Web Developer
         </p>
-        <div className="flex justify-center space-x-4 md:justify-start">
+        <div
+          id="name"
+          className="flex justify-center space-x-4 md:justify-start"
+        >
           <a href="http://">
             <FaFacebook className="text-whitish" size={50} />
           </a>
@@ -26,7 +35,7 @@ const Hero = () => {
             <FaLinkedin className="text-whitish" size={50} />
           </a>
         </div>
-        <div className="flex justify-center md:justify-start">
+        <div id="name" className="flex justify-center md:justify-start">
           <button
             className="bg-transparent
                       text-whitish font-semibold

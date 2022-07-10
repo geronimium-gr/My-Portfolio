@@ -28,7 +28,7 @@
   margin: 0 1rem 1rem;
 }
 
-#slider {
+#project {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,4 +98,19 @@
 .slide-img:hover a {
   opacity: 1;
   transform: scale(1);
+}
+
+#name {
+  animation: slideFromLeft 1s ease-in;
+}
+
+/* Animation */
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

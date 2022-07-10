@@ -37,11 +37,14 @@ const Project = () => {
   ];
 
   return (
-    <section id="slider" className="space-margin shadow-lg bg-whitish">
+    <section
+      id="project"
+      className="space-margin shadow-lg bg-whitish"
+    >
       <div className="max-w-full p-6 md:container">
-        <div className="">
+        <div>
           <div className="slider-wrapper">
-            <div className="">
+            <div>
               <div className="relative flex items-center py-5">
                 <div className="flex-grow border-2 border-newYorkPink"></div>
                 <span className="p-2 text-gunmetal text-2xl text-center font-bold md:text-3xl">
