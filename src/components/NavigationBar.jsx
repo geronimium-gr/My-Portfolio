@@ -1,13 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/geronimologowhite.png";
 import smalllogo from "../images/logo.png";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaArrowUp } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const NavigationBar = () => {
   const [menu, setMenu] = useState(false);
+  const [displayScroll, setdisplayScroll] = useState(false);
 
   const openMenu = () => setMenu(!menu);
+
+  const scrolltoTop = () => {
+    window.scroll(0, 0);
+  };
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (window.scrollY > 90) {
+        setdisplayScroll(true);
+      } else {
+        setdisplayScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     // Navigation Bar
@@ -109,6 +130,17 @@ const NavigationBar = () => {
           </Link>
         </li>
       </ul>
+
+      <button
+        onClick={scrolltoTop}
+        className={`${
+          !displayScroll
+            ? "hidden"
+            : "hidden fixed bottom-[20px] right-[30px] z-30 text-xl bg-gunmetal text-whitish border-none outline-none cursor-pointer p-5 rounded-full animate-bounce md:block"
+        }`}
+      >
+        <FaArrowUp />
+      </button>
     </>
   );
 };

@@ -24,6 +24,16 @@
   }
 }
 
+@layer components {
+  .social-icon {
+    @apply h-16 w-16 mt-2 mb-2 grid place-content-center shadow-lg bg-raisinBlack text-green-500
+               hover:text-white
+               rounded-3xl hover:rounded-xl
+               transition-all duration-300 ease-linear
+               cursor-pointer;
+  }
+}
+
 .space-margin {
   margin: 0 1rem 1rem;
 }
@@ -98,19 +108,4 @@
 .slide-img:hover a {
   opacity: 1;
   transform: scale(1);
-}
-
-#name {
-  animation: slideFromLeft 1s ease-in;
-}
-
-/* Animation */
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }

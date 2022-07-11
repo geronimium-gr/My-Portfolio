@@ -1,6 +1,11 @@
 import React from "react";
 import image from "../images/me.png";
-import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitterSquare,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -22,16 +27,16 @@ const Hero = () => {
           id="name"
           className="flex justify-center space-x-4 md:justify-start"
         >
-          <a href="http://">
+          <a href="http://" className="social-icon hover:bg-[#3b5998]">
             <FaFacebook className="text-whitish" size={50} />
           </a>
-          <a href="http://">
-            <FaTwitter className="text-whitish" size={50} />
+          <a href="http://" className="social-icon hover:bg-[#00acee]">
+            <FaTwitterSquare className="text-whitish" size={50} />
           </a>
-          <a href="http://">
+          <a href="http://" className="social-icon hover:bg-[#6e5494]">
             <FaGithub className="text-whitish" size={50} />
           </a>
-          <a href="http://">
+          <a href="http://" className="social-icon hover:bg-[#0072b1]">
             <FaLinkedin className="text-whitish" size={50} />
           </a>
         </div>
