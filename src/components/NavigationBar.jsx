@@ -7,6 +7,7 @@ import { Link } from "react-scroll";
 const NavigationBar = () => {
   const [menu, setMenu] = useState(false);
   const [displayScroll, setdisplayScroll] = useState(false);
+  const [colorScroll, setColorScroll] = useState(false);
 
   const openMenu = () => setMenu(!menu);
 
@@ -18,8 +19,16 @@ const NavigationBar = () => {
     const handleScroll = (event) => {
       if (window.scrollY > 90) {
         setdisplayScroll(true);
+        if (window.scrollY > 1000) {
+          setColorScroll(true);
+          setdisplayScroll(false);
+        } else {
+          setColorScroll(false);
+          setdisplayScroll(true);
+        }
       } else {
         setdisplayScroll(false);
+        setColorScroll(false);
       }
     };
 
@@ -137,6 +146,17 @@ const NavigationBar = () => {
           !displayScroll
             ? "hidden"
             : "hidden fixed bottom-[20px] right-[30px] z-30 text-xl bg-gunmetal text-whitish border-none outline-none cursor-pointer p-5 rounded-full animate-bounce md:block"
+        }`}
+      >
+        <FaArrowUp />
+      </button>
+
+      <button
+        onClick={scrolltoTop}
+        className={`${
+          !colorScroll
+            ? "hidden"
+            : "hidden fixed bottom-[20px] right-[30px] z-30 text-xl bg-whitish text-gunmetal border-none outline-none cursor-pointer p-5 rounded-full animate-bounce md:block"
         }`}
       >
         <FaArrowUp />
