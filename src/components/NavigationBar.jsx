@@ -12,9 +12,14 @@ const NavigationBar = () => {
   const openMenu = () => setMenu(!menu);
 
   const scrolltoTop = () => {
-    window.scroll(0, 0);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   };
 
+  // For the Back to Top button (Color and Display)
   useEffect(() => {
     const handleScroll = (event) => {
       if (window.scrollY > 90) {

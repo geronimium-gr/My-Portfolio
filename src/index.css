@@ -13,14 +13,12 @@
 
   body {
     @apply bg-newYorkPink;
-  }
-
-  #hero {
     background-image: url("./images/bg.png");
     background-repeat: no-repeat;
     background-size: 1300px;
-    background-position: 50% 0%;
+    background-position: 50% -10%;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -44,11 +42,6 @@
   align-items: center;
 }
 
-/* .container {
-    width: 1600px;
-    margin: auto;
-} */
-
 .subcontainer {
   width: 85%;
   margin: auto;
@@ -59,28 +52,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/* #controls i {
-    color: white;
-    font-size: 1rem;
-}
-
-.previous, .next {
-    padding: 2px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 50%;
-    outline: none;
-    transition: 0.7s ease-in-out;
-    border: 3px solid white;
-    background-color: #1c1d25;
-    box-shadow: 0 0 5px #bbb;
-} */
-
-/* .previous:hover, .next:hover {
-    border: 3px solid gray;
-} */
 
 .slide-img {
   background-position: center;
@@ -100,12 +71,26 @@
 .slide-img a {
   transform: scale(0);
   transition: 0.8s;
-  font-size: 1.5rem;
   opacity: 0;
-  color: white;
 }
 
 .slide-img:hover a {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Pagination */
+.swiper-pagination,
+.swiper-pagination-bullets-dynamic,
+.swiper-pagination-bullets,
+.swiper-pagination-horizontal {
+  bottom: -0px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #21212cff !important;
+}
+
+.swiper-wrapper {
+  padding-bottom: 30px;
 }
