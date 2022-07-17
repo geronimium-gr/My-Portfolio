@@ -20,8 +20,8 @@ const Contact = () => {
             <div className="flex-grow border-2 border-newYorkPink"></div>
           </div>
           <p className="text-whitish py-4">
-            Feel free to leave me a message via form, or you can get a hold
-            of me at <strong>geronimoadalia@gmail.com</strong>
+            Feel free to leave me a message via form, or you can get a hold of
+            me at <strong>geronimoadalia@gmail.com</strong>
           </p>
         </div>
         <input

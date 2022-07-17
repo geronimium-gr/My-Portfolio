@@ -42,13 +42,12 @@ const Project = () => {
               pagination={{
                 dynamicBullets: true,
               }}
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 5000,
+              //   disableOnInteraction: false,
+              // }}
               rewind={true}
               modules={[Navigation, Pagination, Autoplay]}
-              onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
               {project.map((elem) => (
@@ -75,7 +74,7 @@ const Project = () => {
                         <p className="mt-2 text-slate-500">
                           {elem.description}
                         </p>
-                        <List />
+                        <List project={elem} />
                       </div>
                     </div>
                   </div>
