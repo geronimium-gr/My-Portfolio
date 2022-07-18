@@ -1,10 +1,10 @@
 import React from "react";
 // import { FaReact, FaAngular } from "react-icons/fa";
-import * as FontAwesome from "react-icons/fa";
+import * as SimpleIcon from "react-icons/si";
 
 const Icon = (props) => {
   const { iconName } = props;
-  const icon = React.createElement(FontAwesome[iconName]);
+  const icon = React.createElement(SimpleIcon[iconName]);
   return <div>{icon}</div>;
 };
 

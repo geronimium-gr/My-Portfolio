@@ -1,68 +1,95 @@
+import proj1 from "../images/project1.png";
+import proj2 from "../images/project2.png";
+import proj3 from "../images/project3.png";
+
 const project = [
   {
     id: 1,
-    image:
-      "https://www.pledis.co.kr/_data/file/bbsData/efd5efba9cf03c3d239fc3476e9f80bb.jpg",
+    image: proj1,
     name: "Student Organization Portal",
     description:
-      "My capstone project for the final year of my college life. This type of system focuses on making a student portal for the student organizations that can help administration and students in managing academic and non-academic organization.",
+      "I completed the capstone project for the final year of my college life. This type of system focuses on developing a student portal for the Office of Student Affairs of Pamantasan ng Lungsod ng Valenzuela that help administration and students in their academic and non-academic organizations.",
     languages: [
       {
         id: 1,
-        icon: "FaAngular",
+        icon: "SiAngular",
         name: "Angular",
       },
       {
         id: 2,
-        icon: "FaFire",
+        icon: "SiIonic",
+        name: "Ionic",
+      },
+      {
+        id: 3,
+        icon: "SiTypescript",
+        name: "Typescript",
+      },
+      {
+        id: 4,
+        icon: "SiFirebase",
         name: "Firebase",
       },
     ],
+    website: "https://plvconnect.org/",
+    github: "https://github.com/geronimium-gr/studentorgportal_updated",
   },
   {
     id: 2,
-    image:
-      "https://www.pledis.co.kr/_data/file/bbsData/f5bc7b1d43266801bfabe90472efb251.jpg",
+    image: proj2,
     name: "Unit Converter",
     description:
-      "My project for the Web Development subject. This type of system focuses more on unit conversion. The available conversion unit for now: Length, Width, Volume, Mass, Time, and Temperature",
+      "I completed my project in my Web Development class. The unit converter is the conversion between different units of measurement for the same quantity, typically through multiplicative conversion factors. The available conversion unit, for now: Angle, Area, Length, Temperature, Time, and Weight.",
     languages: [
       {
         id: 1,
-        icon: "FaHtml5",
+        icon: "SiHtml5",
         name: "HTML",
       },
       {
         id: 2,
-        icon: "FaCss3Alt",
+        icon: "SiCss3",
         name: "CSS",
       },
       {
         id: 3,
-        icon: "FaJsSquare",
+        icon: "SiJavascript",
         name: "JavaScript",
       },
     ],
+    website: "https://geronimo-unit-converter.netlify.app/home.html",
+    github: "https://github.com/geronimium-gr/Unit-Converter-v2.0",
   },
   {
     id: 3,
-    image:
-      "https://www.pledis.co.kr/_data/file/bbsData/f8a9dd381d920164dd646be18eb355bb.jpg",
-    name: "Project Gyuri",
+    image: proj3,
+    name: "Sample Portfolio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis non consectetur a maiores aliquid sed tenetur odit magnam voluptate! Totam molestias repellat architecto labore voluptatibus, aspernatur enim corporis voluptatem.",
+      "I developed a sample portfolio for my friend. It includes several sections of a portfolio website like Navigation Bar, Hero, Projects, and Contacts, and the user can add social contacts to the website. I used pure HTML, CSS, and Vanilla JavaScript.",
     languages: [
       {
         id: 1,
-        icon: "FaAngular",
-        name: "Angular",
+        icon: "SiHtml5",
+        name: "HTML",
       },
       {
         id: 2,
-        icon: "FaFire",
-        name: "Firebase",
+        icon: "SiCss3",
+        name: "CSS",
+      },
+      {
+        id: 3,
+        icon: "SiJavascript",
+        name: "JavaScript",
+      },
+      {
+        id: 4,
+        icon: "SiJavascript",
+        name: "Tiny Slider JS",
       },
     ],
+    website: "https://geronimo-sample-portfolio.netlify.app/",
+    github: "https://github.com/geronimium-gr/sample-portfolio",
   },
 ];
 

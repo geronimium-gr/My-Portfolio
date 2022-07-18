@@ -1,6 +1,6 @@
 import React from "react";
 import sample from "../images/img-4.jpg";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import List from "../subcomponents/List";
@@ -15,7 +15,7 @@ const Project = () => {
     <section id="project" className="space-margin shadow-lg bg-whitish">
       <div className="max-w-full p-6 md:container">
         <div>
-          <div className="slider-wrapper">
+          <div className="slider-wrapper group">
             <div>
               <div className="relative flex items-center py-5">
                 <div className="flex-grow border-2 border-newYorkPink"></div>
@@ -23,15 +23,15 @@ const Project = () => {
                   Projects
                 </span>
                 <div className="flex-grow border-2 border-newYorkPink"></div>
-                <div id="controls" className="hidden md:flex">
+                <div
+                  id="controls"
+                  className="hidden transition-all duration-300 ease-linear group-hover:flex"
+                >
                   <button className="previous p-1">
-                    <FaArrowAltCircleLeft className="text-gunmetal" size={25} />
+                    <FaArrowLeft className="text-gunmetal" size={25} />
                   </button>
                   <button className="next p-1">
-                    <FaArrowAltCircleRight
-                      className="text-gunmetal"
-                      size={25}
-                    />
+                    <FaArrowRight className="text-gunmetal" size={25} />
                   </button>
                 </div>
               </div>
@@ -43,8 +43,8 @@ const Project = () => {
                 dynamicBullets: true,
               }}
               // autoplay={{
-              //   delay: 5000,
-              //   disableOnInteraction: false,
+              //   delay: 2000,
+              //   disableOnInteraction: true,
               // }}
               rewind={true}
               modules={[Navigation, Pagination, Autoplay]}
@@ -61,7 +61,17 @@ const Project = () => {
                         }}
                       >
                         <a
-                          href="https"
+                          href={`${elem.website}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-whitish border-2 hover:bg-newYorkPink hover:border-newYorkPink px-4 py-3 my-8 mx-auto flex items-center"
+                        >
+                          View Site
+                        </a>
+                        <a
+                          href={`${elem.github}`}
+                          target="_blank"
+                          rel="noreferrer"
                           className="text-whitish border-2 hover:bg-newYorkPink hover:border-newYorkPink px-4 py-3 my-8 mx-auto flex items-center"
                         >
                           View Code

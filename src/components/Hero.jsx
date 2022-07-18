@@ -27,16 +27,28 @@ const Hero = () => {
           id="name"
           className="flex justify-center space-x-4 md:justify-start"
         >
-          <a href="http://" className="social-icon hover:bg-[#3b5998]">
+          <a
+            href="https://web.facebook.com/seyfriedpaulo.geronimo/"
+            className="social-icon hover:bg-[#3b5998]"
+          >
             <FaFacebook className="text-whitish" size={50} />
           </a>
-          <a href="http://" className="social-icon hover:bg-[#00acee]">
+          <a
+            href="https://twitter.com/geronimium_gr"
+            className="social-icon hover:bg-[#00acee]"
+          >
             <FaTwitterSquare className="text-whitish" size={50} />
           </a>
-          <a href="http://" className="social-icon hover:bg-[#6e5494]">
+          <a
+            href="https://github.com/geronimium-gr"
+            className="social-icon hover:bg-[#6e5494]"
+          >
             <FaGithub className="text-whitish" size={50} />
           </a>
-          <a href="http://" className="social-icon hover:bg-[#0072b1]">
+          <a
+            href="https://www.linkedin.com/in/john-paulo-geronimo-561a4b240/"
+            className="social-icon hover:bg-[#0072b1]"
+          >
             <FaLinkedin className="text-whitish" size={50} />
           </a>
         </div>
