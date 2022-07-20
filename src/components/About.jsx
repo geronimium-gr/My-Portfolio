@@ -1,5 +1,5 @@
 import React from "react";
-import sample from "../images/img-4.jpg";
+import AboutImage from "../images/me.jpg";
 
 const About = () => {
   return (
@@ -8,8 +8,8 @@ const About = () => {
         <div className="md:flex">
           <div className="md:shrink-0">
             <img
-              className="h-48 w-full object-cover md:h-full md:w-96"
-              src={sample}
+              className="h-48 w-full object-cover object-top md:h-full md:w-96"
+              src={AboutImage}
               alt=""
             />
           </div>
@@ -24,11 +24,10 @@ const About = () => {
                 <div className="flex-grow border-2 border-newYorkPink"></div>
               </div>
               <p className="mt-2 text-slate-500">
-                Park Jiwon (박지원) was born on March 20, 1998 in Busan, South
-                Korea. She was a trainee for JYP Entertainment from 2012-2015,
-                leaving shortly after being eliminated from the survival show
-                SIXTEEN. In 2017 she became a contestant on the survival show
-                Idol School and placed sixth, making her a member of Fromis_9.
+                A fresh graduate and aspiring Web Developer specializing in
+                building and developing websites with using web frameworks.
+                Currently, I'm focusing on studying the fundamentals of React JS
+                and its other frameworks (e.g. React Bootstrap).
               </p>
             </div>
           </div>
