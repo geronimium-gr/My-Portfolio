@@ -24,10 +24,15 @@ const About = () => {
                 <div className="flex-grow border-2 border-newYorkPink"></div>
               </div>
               <p className="mt-2 text-slate-500">
-                A fresh graduate and aspiring Web Developer specializing in
-                building and developing websites with using web frameworks.
-                Currently, I'm focusing on studying the fundamentals of React JS
-                and its other frameworks (e.g. React Bootstrap).
+                I am a fresh graduate and aspiring Web Developer, specializing
+                in building and developing websites using web frameworks.
+                Currently, I'm focusing on studying the fundamentals of React.js
+                and its other frameworks (e.g., React Bootstrap).
+                <br />
+                <br />
+                I'm looking for opportunities where I can enhance my skills, and
+                I'm willing to learn new techniques and knowledge that can help
+                for the improvement of my career in the future.
               </p>
             </div>
           </div>

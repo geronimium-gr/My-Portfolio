@@ -20,7 +20,23 @@ module.exports = {
         raisinBlack: "#21212cff",
       },
       backgroundImage: {
-        "project": "url('../src/images/img-4.jpg')"
+        project: "url('../src/images/img-4.jpg')",
+      },
+      keyframes: {
+        moveLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: 0.2 },
+          "70%": { transform: "translateX(-50%)", opacity: 0.5 },
+          "100%": { transform: "translateX(0%)", opacity: 1 },
+        },
+        moveRight: {
+          "0%": { transform: "translateX(100%)", opacity: 0.2 },
+          "70%": { transform: "translateX(50%)", opacity: 0.5 },
+          "100%": { transform: "translateX(0%)", opacity: 1 },
+        },
+      },
+      animation: {
+        moveLeft: "moveLeft 2s",
+        moveRight: "moveRight 2s",
       },
     },
   },
