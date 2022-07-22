@@ -62,19 +62,6 @@ const Hero = () => {
           </a>
         </div>
         <div id="name" className="flex justify-center md:justify-start">
-          {/* <a
-            href={resume}
-            download="Geronimo-Resume"
-            className="text-whitish font-semibold group border-[3px] px-6 py-3 my-2 flex items-center hover:text-newYorkPink hover:bg-whitish hover:border-transparent"
-          >
-            Download CV
-            <span className="transition-all duration-300 ease-linear group-hover:hidden">
-              <FaAngleRight className="ml-2" />
-            </span>
-            <span className="transition-all duration-300 ease-linear hidden group-hover:flex">
-              <FaAngleDoubleRight className="ml-2" />
-            </span>
-          </a> */}
           <a
             href={resume}
             download="Geronimo-Resume"
