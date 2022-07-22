@@ -1,12 +1,4 @@
 import React from "react";
-// import { FaReact, FaAngular } from "react-icons/fa";
-import * as SimpleIcon from "react-icons/si";
-
-const Icon = (props) => {
-  const { iconName } = props;
-  const icon = React.createElement(SimpleIcon[iconName]);
-  return <div>{icon}</div>;
-};
 
 const List = ({ project }) => {
   return (
@@ -20,7 +12,7 @@ const List = ({ project }) => {
             key={elem.id}
             className="flex flex-row items-center px-3 py-2 border-b border-gray-200 w-full"
           >
-            <Icon iconName={elem.icon} />
+            {elem.icon}
             <div className="pl-3">{elem.name}</div>
           </li>
         ))}

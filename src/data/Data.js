@@ -1,6 +1,15 @@
 import proj1 from "../images/project1.png";
 import proj2 from "../images/project2.png";
 import proj3 from "../images/project3.png";
+import {
+  SiAngular,
+  SiIonic,
+  SiTypescript,
+  SiFirebase,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+} from "react-icons/si";
 
 const project = [
   {
@@ -12,22 +21,22 @@ const project = [
     languages: [
       {
         id: 1,
-        icon: "SiAngular",
+        icon: <SiAngular />,
         name: "Angular",
       },
       {
         id: 2,
-        icon: "SiIonic",
+        icon: <SiIonic />,
         name: "Ionic",
       },
       {
         id: 3,
-        icon: "SiTypescript",
+        icon: <SiTypescript />,
         name: "Typescript",
       },
       {
         id: 4,
-        icon: "SiFirebase",
+        icon: <SiFirebase />,
         name: "Firebase",
       },
     ],
@@ -43,17 +52,17 @@ const project = [
     languages: [
       {
         id: 1,
-        icon: "SiHtml5",
+        icon: <SiHtml5 />,
         name: "HTML",
       },
       {
         id: 2,
-        icon: "SiCss3",
+        icon: <SiCss3 />,
         name: "CSS",
       },
       {
         id: 3,
-        icon: "SiJavascript",
+        icon: <SiJavascript />,
         name: "JavaScript",
       },
     ],
@@ -69,22 +78,22 @@ const project = [
     languages: [
       {
         id: 1,
-        icon: "SiHtml5",
+        icon: <SiHtml5 />,
         name: "HTML",
       },
       {
         id: 2,
-        icon: "SiCss3",
+        icon: <SiCss3 />,
         name: "CSS",
       },
       {
         id: 3,
-        icon: "SiJavascript",
+        icon: <SiJavascript />,
         name: "JavaScript",
       },
       {
         id: 4,
-        icon: "SiJavascript",
+        icon: <SiJavascript />,
         name: "Tiny Slider JS",
       },
     ],

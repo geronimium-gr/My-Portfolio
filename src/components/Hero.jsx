@@ -1,12 +1,11 @@
 import React from "react";
-import resume from "../images/Geronimo-John-Paulo-CV.pdf"
+import resume from "../images/Geronimo-John-Paulo-Resume.pdf";
 import {
   FaFacebook,
   FaTwitterSquare,
   FaGithub,
   FaLinkedin,
-  FaAngleRight,
-  FaAngleDoubleRight,
+  FaDownload,
 } from "react-icons/fa";
 
 const Hero = () => {
@@ -63,7 +62,7 @@ const Hero = () => {
           </a>
         </div>
         <div id="name" className="flex justify-center md:justify-start">
-          <a
+          {/* <a
             href={resume}
             download="Geronimo-Resume"
             className="text-whitish font-semibold group border-[3px] px-6 py-3 my-2 flex items-center hover:text-newYorkPink hover:bg-whitish hover:border-transparent"
@@ -75,6 +74,19 @@ const Hero = () => {
             <span className="transition-all duration-300 ease-linear hidden group-hover:flex">
               <FaAngleDoubleRight className="ml-2" />
             </span>
+          </a> */}
+          <a
+            href={resume}
+            download="Geronimo-Resume"
+            className="text-whitish p-4 px-6 py-3 font-semibold group border-[3px] relative inline-flex items-center justify-center overflow-hidden border-whitish text-newYorkPink shadow-md transition duration-300 ease-out"
+          >
+            <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-whitish text-white duration-300 group-hover:translate-x-0">
+              <FaDownload className="text-newYorkPink" size={25} />
+            </span>
+            <span className="ease absolute flex h-full w-full transform items-center justify-center text-whitish transition-all duration-300 group-hover:translate-x-full">
+              Download CV
+            </span>
+            <span className="invisible relative">Download CV</span>
           </a>
         </div>
       </div>
