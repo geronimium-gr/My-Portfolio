@@ -26,8 +26,8 @@ const About = () => {
               <p className="mt-2 text-slate-500">
                 I am a fresh graduate and aspiring Web Developer, specializing
                 in building and developing websites using web frameworks.
-                Currently, I'm focusing on studying the fundamentals of React.js
-                and its other frameworks (e.g., React Bootstrap).
+                Currently, I'm focusing on studying the fundamentals of Java, Angular Frameworks
+                and other frameworks (e.g., React).
                 <br />
                 <br />
                 I'm looking for opportunities where I can enhance my skills, and
