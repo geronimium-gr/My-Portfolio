@@ -42,10 +42,10 @@ const Project = () => {
               pagination={{
                 dynamicBullets: true,
               }}
-              // autoplay={{
-              //   delay: 2000,
-              //   disableOnInteraction: true,
-              // }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+              }}
               rewind={true}
               modules={[Navigation, Pagination, Autoplay]}
               onSwiper={(swiper) => console.log(swiper)}
