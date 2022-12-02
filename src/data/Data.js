@@ -72,9 +72,9 @@ const project = [
   {
     id: 3,
     image: proj3,
-    name: "Sample Portfolio",
+    name: "Rock Paper and Scissor Game",
     description:
-      "I developed a sample portfolio for my friend. It includes several sections of a portfolio website like Navigation Bar, Hero, Projects, and Contacts, and the user can add social contacts to the website. I used pure HTML, CSS, and Vanilla JavaScript.",
+      "I developed a simple Rock Paper and Scissor game using HTML, CSS, and Vanilla JavaScript. This is one of the code challenges from Frontend Mentor and I used JavaScript to add functionalities for the game.",
     languages: [
       {
         id: 1,
@@ -90,15 +90,10 @@ const project = [
         id: 3,
         icon: <SiJavascript />,
         name: "JavaScript",
-      },
-      {
-        id: 4,
-        icon: <SiJavascript />,
-        name: "Tiny Slider JS",
-      },
+      }
     ],
-    website: "https://geronimo-sample-portfolio.netlify.app/",
-    github: "https://github.com/geronimium-gr/sample-portfolio",
+    website: "https://geronimo-rockpaperscissor.vercel.app/",
+    github: "https://github.com/geronimium-gr/rockpaperscissor",
   },
 ];
 
